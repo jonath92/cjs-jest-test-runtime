@@ -26,12 +26,8 @@ export function createGlobalObject() {
   return {
     log: (msg: string) => console.log(msg),
     logError: (error: string) => console.log(error),
-    dummy: 5,
-    // @ts-ignore
-    dummyFun: () => console.log('dummy Func called')
   }
 }
-// @ts-ignore
+
 exports.createGlobalObject = createGlobalObject
-// @ts-ignore
 exports.createImports = createImports

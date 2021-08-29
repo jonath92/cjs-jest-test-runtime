@@ -3,7 +3,7 @@ const cjsGlobal = require('./cjsGlobalBundled')
 
 
 
-class CustomEnvironment extends NodeEnvironment {
+class CjsEnvironment extends NodeEnvironment {
     constructor(config, context) {
       super(config, context);
       this.testPath = context.testPath;
@@ -46,4 +46,4 @@ class CustomEnvironment extends NodeEnvironment {
     }
   }
   
-  module.exports = CustomEnvironment;
+  module.exports = CjsEnvironment;

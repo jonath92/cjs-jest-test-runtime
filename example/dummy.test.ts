@@ -1,6 +1,6 @@
-import { createIcon } from "../dummy"
+import { createIcon } from "./dummy"
 
-it('sum working', () => {
+it('createIcon working', () => {
 
     const myIcon = createIcon()
 

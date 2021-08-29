@@ -1,6 +1,7 @@
 {
   "name": "getting-started-using-a-configuration",
   "version": "1.0.0",
+  
   "private": true,
   "scripts": {
     "test": "jest --watchAll",
