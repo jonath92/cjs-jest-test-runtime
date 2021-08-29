@@ -18,7 +18,7 @@ module.exports = {
     extensions: ['.tsx', '.ts', '.js'],
   },
   output: {
-    filename: 'main.js',
+    filename: 'cjsGlobalBundled.js',
     path: path.resolve(__dirname, 'dist'),
   },
 };

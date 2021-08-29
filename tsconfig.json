@@ -3,6 +3,8 @@
         "lib": [
             "es2017" // important to hide default typescript libraries (such as DOM elements): https://stackoverflow.com/questions/57336918/disable-intellisense-for-default-typescript-libraries-in-vscode
         ],
+        // needed for ts-jest
+        "esModuleInterop": true,
         "moduleResolution": "Node",
         "noImplicitAny": true,
         "sourceMap": true,

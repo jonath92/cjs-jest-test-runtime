@@ -1,16 +1,28 @@
 import * as _ from 'lodash';
 
+import * as St from './gi/St'
 
-export function component() {
-  console.log('hi from component')
-  // const element = document.createElement('div');
+export function createImports() {
 
-  // // Lodash, now imported by this script
-  // element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-
-  // return element;
+  return {
+    gi: {
+      St
+    }
+  }
 }
 
-exports.component = component
 
-// document.body.appendChild(component());
+export function createGlobalObject() {
+
+  return {
+    // @ts-ignore
+    log: (msg: string) => console.log(msg),
+    dummy: 5,
+    // @ts-ignore
+    dummyFun: () => console.log('dummy Func called')
+  }
+}
+// @ts-ignore
+exports.createGlobalObject = createGlobalObject
+// @ts-ignore
+exports.createImports = createImports
