@@ -9,7 +9,6 @@
         "noImplicitAny": true,
         "sourceMap": true,
         "target": "es2017",
-        //"types": [] // ignore global types from node_modules https://stackoverflow.com/a/54277766/11603006 (important for not showing node globals such as console in intelisense)
     },
     "include": [
         "./src/**/*",
