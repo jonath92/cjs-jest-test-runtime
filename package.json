@@ -1,8 +1,7 @@
 {
-  "name": "getting-started-using-a-configuration",
+  "name": "cjs-jest-test-runtime",
   "version": "1.0.0",
-  
-  "private": true,
+  "main": "./dist/cjsEnvironment.js",
   "scripts": {
     "test": "jest --watchAll",
     "build": "webpack"
