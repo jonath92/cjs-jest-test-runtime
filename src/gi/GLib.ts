@@ -64,3 +64,7 @@ export class Variant {
     }
 
 }
+
+export function get_home_dir(){
+    return '/home/MOCKED_USER'
+}
