@@ -1,6 +1,6 @@
 {
   "name": "cjs-jest-test-runtime",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "./dist/cjsEnvironment.js",
   "scripts": {
     "test": "jest --watchAll",
