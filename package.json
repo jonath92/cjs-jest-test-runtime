@@ -1,10 +1,10 @@
 {
   "name": "cjs-jest-test-runtime",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "main": "./dist/cjsEnvironment.js",
   "scripts": {
-    "test": "jest --watchAll",
-    "build": "webpack"
+    "build": "webpack", 
+    "test": "npm run build && jest --watchAll"
   },
   "keywords": [],
   "author": "",

@@ -4,30 +4,28 @@ import * as Cvc from './gi/Cvc'
 import * as GLib from './gi/GLib'
 import * as Pango from './gi/Pango'
 import * as St from './gi/St'
+import * as interfaces from './misc/interfaces'
 
-
-export function createImports() {
-
+export function createCjsGlobals() {
   return {
-    gi: {
-      Atk,
-      Cvc,
-      Clutter,
-      GLib, 
-      Pango,
-      St
+    global: {
+      log: (msg: string) => console.log(msg),
+      logError: (error: string) => console.log(error),
+    },
+    imports: {
+      gi: {
+        Atk,
+        Cvc,
+        Clutter,
+        GLib,
+        Pango,
+        St
+      },
+      misc: {
+        interfaces
+      }
     }
   }
 }
 
-
-export function createGlobalObject() {
-
-  return {
-    log: (msg: string) => console.log(msg),
-    logError: (error: string) => console.log(error),
-  }
-}
-
-exports.createGlobalObject = createGlobalObject
-exports.createImports = createImports
+exports.createCjsGlobals = createCjsGlobals
