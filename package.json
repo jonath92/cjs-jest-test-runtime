@@ -1,6 +1,6 @@
 {
   "name": "cjs-jest-test-runtime",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "main": "./dist/cjsEnvironment.js",
   "scripts": {
     "build": "webpack", 

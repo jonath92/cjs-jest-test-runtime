@@ -15,12 +15,13 @@ class CjsEnvironment extends NodeEnvironment {
 
     //await someSetupTasks(this.testPath);
 
-    const cjsGlobals = createCjsGlobals()
+    const {global, ...otherCjsGlobals} = createCjsGlobals()
 
-    Object.assign(this.global, cjsGlobals)
+    Object.assign(this.global, otherCjsGlobals)
 
-    // this.global.global = cjsGlobal.createGlobalObject()
-    // this.global.imports = cjsGlobal.createImports()
+    // overriding the "this.global.global" object would lead to "describe" from jest not working anymore :-(
+    Object.assign(this.global.global, global)
+
 
     this.global.console = null
 

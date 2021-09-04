@@ -6,5 +6,8 @@ export function createIcon() {
         icon_name: 'dummy'
     })
 
+    // @ts-ignore
+    global.log('global is working')
+
     return icon
 }
