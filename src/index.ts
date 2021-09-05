@@ -5,6 +5,10 @@ import * as GLib from './gi/GLib'
 import * as Pango from './gi/Pango'
 import * as St from './gi/St'
 import * as interfaces from './misc/interfaces'
+import * as util from './misc/util'
+import * as tooltips from './ui/tooltips'
+import * as applet from './ui/applet'
+import * as panel from './ui/panel'
 
 export function createCjsGlobals() {
   return {
@@ -22,7 +26,13 @@ export function createCjsGlobals() {
         St
       },
       misc: {
-        interfaces
+        interfaces, 
+        util
+      }, 
+      ui: {
+        tooltips, 
+        applet, 
+        panel
       }
     }
   }

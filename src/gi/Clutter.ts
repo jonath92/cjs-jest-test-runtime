@@ -19,7 +19,15 @@ export interface ActorOptions {
     name?: string
 }
 
+export interface SavedSignal {
+    type: string, 
+    callback: any
+}
+
 export class Actor implements Container {
+
+    // workaround to get access to the signals from tests. Not existing in reality
+    private _signals: SavedSignal[] = []
 
     #children: Actor[] = []
     #numberSignals = 0
@@ -114,7 +122,13 @@ export class Actor implements Container {
         this.remove_actor(actor)
     }
 
-    connect(signal: any, cb: any) {
+    connect(signal: string, cb: any) {
+
+        this._signals.push({
+            type: signal, 
+            callback: cb
+        })
+
         this._check_destroyed()
         return (this.#numberSignals++)
     }
@@ -148,6 +162,13 @@ export class Actor implements Container {
         this._check_destroyed()
         this.#children = []
     }
+}
+
+export enum ActorAlign {
+    CENTER = 2,
+    END = 3,
+    FILL = 0,
+    START = 1
 }
 
 export class Text extends Actor {
