@@ -1,9 +1,12 @@
 import * as Atk from './gi/Atk'
 import * as Clutter from './gi/Clutter'
 import * as Cvc from './gi/Cvc'
+import * as Gio from './gi/Gio'
 import * as GLib from './gi/GLib'
 import * as Pango from './gi/Pango'
+import * as Soup from './gi/Soup'
 import * as St from './gi/St'
+
 import * as interfaces from './misc/interfaces'
 import * as util from './misc/util'
 import * as tooltips from './ui/tooltips'
@@ -19,10 +22,12 @@ export function createCjsGlobals() {
     imports: {
       gi: {
         Atk,
-        Cvc,
         Clutter,
+        Cvc,
+        Gio, 
         GLib,
         Pango,
+        Soup,
         St
       },
       misc: {
