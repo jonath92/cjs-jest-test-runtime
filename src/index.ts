@@ -16,7 +16,7 @@ import * as panel from './ui/panel'
 export function createCjsGlobals() {
   return {
     global: {
-      log: (msg: string) => console.log(msg),
+      log: console.log,
       logError: (error: string) => console.log(error),
     },
     imports: {
